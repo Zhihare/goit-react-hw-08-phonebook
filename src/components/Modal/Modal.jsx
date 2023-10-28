@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { Overlay, ModalWindow, ModalTitle } from './ModalStyle'
 import { ConteinerContactsButton } from 'components/ContactsForm/CotactsFormStyle';
 import { useDispatch, useSelector } from 'react-redux';
-import { setModal, setModalData } from 'redax/contactsReduser';
-import { modalDataSelector } from 'redax/selector';
+import { setModal, setModalData } from 'redux/Contacts/contactsReduser';
+import { modalDataSelector } from 'redux/Contacts/selector';
 
 export function Modal() {
 	const modalData = useSelector(modalDataSelector);

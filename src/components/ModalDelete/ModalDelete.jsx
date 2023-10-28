@@ -2,10 +2,10 @@ import React from 'react'
 
 import { ConteinerContactsButton } from 'components/ContactsForm/CotactsFormStyle';
 import { ModalTitle, ModalWindow, Overlay } from 'components/Modal/ModalStyle';
-import { setModalDelete, setModalDeleteData } from 'redax/contactsReduser';
+import { setModalDelete, setModalDeleteData } from 'redux/Contacts/contactsReduser';
 import { useDispatch, useSelector } from 'react-redux';
-import { modalDeleteDataSelector } from 'redax/selector';
-import { deleteContact } from 'redax/operations';
+import { modalDeleteDataSelector } from 'redux/Contacts/selector';
+import { deleteContact } from 'redux/Contacts/operations';
 
 export function ModalDelete() {
 	const modalDeleteData = useSelector(modalDeleteDataSelector);

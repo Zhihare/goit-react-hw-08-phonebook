@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { ContainerContactsForm, ContainerContactsLabel, ConteinerContactsButton, ConteinerContactsInput } from './CotactsFormStyle';
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter, setModal, setModalData } from 'redax/contactsReduser';
+import { setFilter, setModal, setModalData } from 'redux/Contacts/contactsReduser';
 import { nanoid } from "nanoid";
-import { contactsSelector } from 'redax/selector';
-import { addContact } from 'redax/operations';
+import { contactsSelector } from 'redux/Contacts/selector';
+import { addContact } from 'redux/Contacts/operations';
 import { toast } from 'react-toastify';
 
 export const ContactsForm = () => {

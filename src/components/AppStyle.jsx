@@ -54,5 +54,6 @@ export const ToogleDarkMode = styled.button`
 
 	&:hover{
 		color:red;
+  
 	}
 `

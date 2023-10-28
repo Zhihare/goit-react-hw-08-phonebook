@@ -2,9 +2,9 @@
 import React from 'react'
 import { FilterInput, FilterLabel, FilterSpan } from './FilterStyle'
 import { BsSearch } from 'react-icons/bs';
-import { setFilter } from 'redax/contactsReduser';
+import { setFilter } from 'redux/Contacts/contactsReduser';
 import { useSelector, useDispatch } from 'react-redux';
-import { filterSelector } from 'redax/selector';
+import { filterSelector } from 'redux/Contacts/selector';
 
 export const Filter = () => {
 	const filter = useSelector(filterSelector);
