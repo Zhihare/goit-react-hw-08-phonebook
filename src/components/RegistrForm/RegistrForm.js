@@ -2,7 +2,6 @@ import { ConteinerApp, ContentApp, TitleApp } from 'components/AppStyle';
 import { ContainerContactsForm, ContainerContactsLabel, ConteinerContactsButton, ConteinerContactsInput } from 'components/ContactsForm/CotactsFormStyle';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/Auth/operations';
-import { ThemeProvider } from "styled-components";
 
 
 export const RegisterForm = () => {

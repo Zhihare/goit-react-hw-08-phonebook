@@ -1,9 +1,12 @@
 export const LightTheme = {
-	modalColor: "white",
+	modalColor: "#ffffff82",
 	titleColor: "black",
 	tagLineColor: "white",
 	buttonColor: "black",
 	border: "rgba(25, 25, 25, .5)",
+	active: "white",
+	hover: "white",
+	buttonHover: "white",
 };
 
 export const DarkTheme = {
@@ -12,4 +15,7 @@ export const DarkTheme = {
 	tagLineColor: "#31313196",
 	buttonColor: "#a79c70",
 	border: "rgba(255, 255, 255, .5)",
+	active: "#a79c70",
+	hover: "#a79c70",
+	buttonHover: "yellow",
 }

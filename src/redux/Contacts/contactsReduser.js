@@ -78,16 +78,16 @@ const contactsSlice = createSlice({
 			state.contacts.items.splice(index, 1);
 
 		},
-		// [updateContact.rejected]: handleRejected,
-		// [updateContact.pending]: handlePending,
-		// [updateContact.fulfilled](state, action) {
-		// 	state.contacts.isLoading = false;
-		// 	state.contacts.error = null;
-		// 	const index = state.contacts.items.findIndex(item => item.id === action.payload.id);
-		// 	state.contacts.items.splice(index, 1);
+		[updateContact.rejected]: handleRejected,
+		[updateContact.pending]: handlePending,
+		[updateContact.fulfilled](state, action) {
+			state.contacts.isLoading = false;
+			state.contacts.error = null;
+			const index = state.contacts.items.findIndex(item => item.id === action.payload.id);
+			state.contacts.items.splice(index, 1);
 
-		// },
-		// [updateContact.rejected]: handleRejected,
+		},
+		[updateContact.rejected]: handleRejected,
 	}
 })
 export const { setContacts, setDeleteContacts, setFilter, setModal, setModalData, setModalDelete, setModalDeleteData, setTheme } =

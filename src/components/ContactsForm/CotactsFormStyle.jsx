@@ -16,6 +16,7 @@ export const ContainerContactsLabel = styled.label`
 `
 
 export const ConteinerContactsInput = styled.input`
+width: 300px;
     background-color: ${(props) => props.theme.themes.tagLineColor};
     border-style: ridge;
     color: ${(props) => props.theme.themes.titleColor}

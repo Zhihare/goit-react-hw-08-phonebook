@@ -53,7 +53,6 @@ export const ToogleDarkMode = styled.button`
   color: ${(props) => props.theme.themes.buttonColor};
 
 	&:hover{
-		color:red;
-  
+		color: ${(props) => props.theme.themes.buttonHover};
 	}
 `

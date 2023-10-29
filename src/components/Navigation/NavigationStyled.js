@@ -5,10 +5,15 @@ export const NavigationNav = styled.nav`
     justify-content: space-around;
 	align-items: center;
 	gap: 20px;
-/* padding: 15px 0;  */
 
-a{
-	text-decoration: none;
-	color: ${(prop) => prop.theme.themes.titleColor};
-}
+		a{
+	padding: 6px;
+	border-radius: 10px;
+	border: 2px solid transparent;
+	}
+	.active{
+		color: ${(props) => props.theme.themes.active};
+		border-color: ${(props) => props.theme.themes.active};		
+	}
+
 `

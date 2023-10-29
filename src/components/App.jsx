@@ -1,23 +1,12 @@
-
-import { GoSun } from 'react-icons/go';
-import { HiMoon } from 'react-icons/hi';
-import { ContactsForm } from "./ContactsForm/ContactsForm";
-import { ContactsList } from "./ContactsList/ContactsList";
-import { Filter } from "./Filter/Filter";
-import { ConteinerApp, ContentApp, TitleApp, ToogleDarkMode } from "./AppStyle";
-import { Modal } from "./Modal/Modal";
-import { ModalDelete } from "./ModalDelete/ModalDelete";
 import { ThemeProvider } from "styled-components";
-import { DarkTheme, LightTheme } from "constants/DarkMode";
-import { useDispatch, useSelector } from "react-redux";
-import { setTheme } from "redux/Contacts/contactsReduser";
-import { modalDeleteSelector, modalSelector, themesSelector } from 'redux/Contacts/selector';
-import { fetchContacts } from 'redux/Contacts/operations';
-import { lazy, useEffect } from 'react';
+import { useSelector } from "react-redux";
+import { themesSelector } from 'redux/Contacts/selector';
+import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'components/Loyout/Loyout';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/Registr'));
@@ -26,33 +15,11 @@ const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 export function App() {
 
-  // const modal = useSelector(modalSelector);
-  // const modalDelete = useSelector(modalDeleteSelector);
   const themes = useSelector(themesSelector);
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
-
-  // const changeTheme = () => {
-  //   if (themes === LightTheme) {
-  //     dispatch(setTheme(DarkTheme));
-  //     return;
-  //   }
-  //   if (themes !== LightTheme) {
-  //     dispatch(setTheme(LightTheme));
-  //     return;
-  //   }
-  // };
-
-  // const icon = themes === LightTheme ?
-  //   <HiMoon size={30} /> :
-  //   <GoSun size={30} />;
 
   return (
     <ThemeProvider theme={{ themes }} >
-      {/* <ToogleDarkMode onClick={changeTheme}>{icon}</ToogleDarkMode> */}
+
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -76,6 +43,7 @@ export function App() {
           />
         </Route>
       </Routes>
-    </ThemeProvider>
+
+    </ThemeProvider >
   );
 }

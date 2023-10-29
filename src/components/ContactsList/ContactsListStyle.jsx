@@ -41,8 +41,9 @@ export const ContactsListButton = styled.button`
     background-color: transparent;
 	transition-duration: .8s;
     color: ${(props) => props.theme.themes.buttonColor};
+    cursor: pointer;
 
 	&:hover{
-		color:red;
+		color: ${(props) => props.theme.themes.buttonHover};
 	}
 `
