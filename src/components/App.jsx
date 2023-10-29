@@ -28,8 +28,7 @@ export function App() {
 
   // const modal = useSelector(modalSelector);
   // const modalDelete = useSelector(modalDeleteSelector);
-  //const themes = useSelector(themesSelector);
-
+  const themes = useSelector(themesSelector);
   // const dispatch = useDispatch();
 
   // useEffect(() => {
@@ -52,45 +51,31 @@ export function App() {
   //   <GoSun size={30} />;
 
   return (
-    // <ThemeProvider theme={{ themes }} >
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route
-          path="/register"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
-          }
-        />
-        <Route
-          path="/contacts"
-          element={
-            <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
-          }
-        />
-      </Route>
-    </Routes>
-    /* <ConteinerApp>
-      <ContentApp>
-        <TitleApp title="Phonebook">Phonebook</TitleApp>
-        <ContactsForm />
-        <TitleApp>Contacts</TitleApp>
-        <Filter />
-        <ContactsList />
-        <ToogleDarkMode onClick={changeTheme}>{icon}</ToogleDarkMode>
-
-        {modal && <Modal />}
-
-        {modalDelete && <ModalDelete />}
-      </ContentApp>
-    </ConteinerApp> */
-    // </ThemeProvider>
+    <ThemeProvider theme={{ themes }} >
+      {/* <ToogleDarkMode onClick={changeTheme}>{icon}</ToogleDarkMode> */}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute redirectTo="/contacts" component={<RegisterPage />} />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+            }
+          />
+          <Route
+            path="/contacts"
+            element={
+              <PrivateRoute redirectTo="/login" component={<ContactsPage />} />
+            }
+          />
+        </Route>
+      </Routes>
+    </ThemeProvider>
   );
-
-};
+}

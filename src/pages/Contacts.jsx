@@ -29,38 +29,37 @@ export default function Contacts() {
 		dispatch(fetchContacts());
 	}, [dispatch]);
 
-	const changeTheme = () => {
-		if (themes === LightTheme) {
-			dispatch(setTheme(DarkTheme));
-			return;
-		}
-		if (themes !== LightTheme) {
-			dispatch(setTheme(LightTheme));
-			return;
-		}
-	};
+	// const changeTheme = () => {
+	// 	if (themes === LightTheme) {
+	// 		dispatch(setTheme(DarkTheme));
+	// 		return;
+	// 	}
+	// 	if (themes !== LightTheme) {
+	// 		dispatch(setTheme(LightTheme));
+	// 		return;
+	// 	}
+	// };
 
-	const icon = themes === LightTheme ?
-		<HiMoon size={30} /> :
-		<GoSun size={30} />;
+	// const icon = themes === LightTheme ?
+	// 	<HiMoon size={30} /> :
+	// 	<GoSun size={30} />;
 
 	return (
-		<ThemeProvider theme={{ themes }} >
-			<ConteinerApp>
-				<ContentApp>
-					<TitleApp title="Phonebook">Phonebook</TitleApp>
-					<ContactsForm />
-					<TitleApp>Contacts</TitleApp>
-					<Filter />
-					<ContactsList />
-					<ToogleDarkMode onClick={changeTheme}>{icon}</ToogleDarkMode>
+		// <ThemeProvider theme={{ themes }} >
+		<ConteinerApp>
+			<ContentApp>
+				<TitleApp title="Phonebook">Phonebook</TitleApp>
+				<ContactsForm />
+				<TitleApp>Contacts</TitleApp>
+				<Filter />
+				<ContactsList />
 
-					{modal && <Modal />}
 
-					{modalDelete && <ModalDelete />}
-				</ContentApp>
-			</ConteinerApp>
-		</ThemeProvider>
+				{modal && <Modal />}
+				{modalDelete && <ModalDelete />}
+			</ContentApp>
+		</ConteinerApp>
+		// </ThemeProvider >
 	);
 
 };

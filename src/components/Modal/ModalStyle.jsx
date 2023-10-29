@@ -1,23 +1,22 @@
 import styled from 'styled-components';
 
-export const Overlay = styled.div
-  `
+export const Overlay = styled.div`
 	 position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  top: -20vh;
+  left: -50vw;
+  right: -50vw;
+  bottom: -10vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  
 `
 
 export const ModalWindow = styled.div`
 
- position: absolute;
+ position: relative;
   width: 100%;
   max-width: 550px;
   height: 100%;
   max-height: 200px;
-  background-color: #fff;
   border-radius: 10px;
   padding: 25px;
 
@@ -32,7 +31,11 @@ export const ModalWindow = styled.div`
   align-content: space-around;
 
  background-color: ${(props) => props.theme.themes.modalColor};
+  backdrop-filter: blur(70px);
  color: ${(props) => props.theme.themes.titleColor};
+ border: 2px solid ${(props) => props.theme.themes.border};
+  border-radius: 20px;
+ 
 
 `
 export const ModalTitle = styled.p`

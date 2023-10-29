@@ -1,5 +1,8 @@
+import { ConteinerApp, ContentApp, TitleApp } from 'components/AppStyle';
+import { ContainerContactsForm, ContainerContactsLabel, ConteinerContactsButton, ConteinerContactsInput } from 'components/ContactsForm/CotactsFormStyle';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/Auth/operations';
+import { ThemeProvider } from "styled-components";
 
 
 export const RegisterForm = () => {
@@ -19,20 +22,25 @@ export const RegisterForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} autoComplete="off">
-			<label >
-				Username
-				<input type="text" name="name" />
-			</label>
-			<label>
-				Email
-				<input type="email" name="email" />
-			</label>
-			<label>
-				Password
-				<input type="password" name="password" />
-			</label>
-			<button type="submit">Register</button>
-		</form>
+		<ConteinerApp>
+			<ContentApp>
+				<TitleApp title="Registr">Register</TitleApp>
+				<ContainerContactsForm onSubmit={handleSubmit} autoComplete="off">
+					<ContainerContactsLabel >
+						Username
+						<ConteinerContactsInput type="text" name="name" />
+					</ContainerContactsLabel>
+					<ContainerContactsLabel>
+						Email
+						<ConteinerContactsInput type="email" name="email" />
+					</ContainerContactsLabel>
+					<ContainerContactsLabel>
+						Password
+						<ConteinerContactsInput type="password" name="password" />
+					</ContainerContactsLabel>
+					<ConteinerContactsButton type="submit">Register</ConteinerContactsButton>
+				</ContainerContactsForm>
+			</ContentApp>
+		</ConteinerApp>
 	);
 };

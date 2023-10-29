@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContactsListContainer = styled.div`
     width: 100%;
     height: 500px;
-    overflow-y: scroll;
+    overflow-y: auto;
     
     &::-webkit-scrollbar-track
 {

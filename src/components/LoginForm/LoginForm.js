@@ -1,3 +1,5 @@
+import { ConteinerApp, ContentApp, TitleApp } from 'components/AppStyle';
+import { ContainerContactsForm, ContainerContactsLabel, ConteinerContactsButton, ConteinerContactsInput } from 'components/ContactsForm/CotactsFormStyle';
 import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/Auth/operations';
 
@@ -17,16 +19,21 @@ export const LoginForm = () => {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} autoComplete="off">
-			<label >
-				Email
-				<input type="email" name="email" />
-			</label>
-			<label >
-				Password
-				<input type="password" name="password" />
-			</label>
-			<button type="submit">Log In</button>
-		</form>
+		<ConteinerApp>
+			<ContentApp>
+				<TitleApp title="Login">Login</TitleApp>
+				<ContainerContactsForm onSubmit={handleSubmit} autoComplete="off">
+					<ContainerContactsLabel >
+						Email
+						<ConteinerContactsInput type="email" name="email" />
+					</ContainerContactsLabel>
+					<ContainerContactsLabel >
+						Password
+						<ConteinerContactsInput type="password" name="password" />
+					</ContainerContactsLabel>
+					<ConteinerContactsButton type="submit">Log In</ConteinerContactsButton>
+				</ContainerContactsForm>
+			</ContentApp>
+		</ConteinerApp>
 	);
 };

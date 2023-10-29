@@ -8,6 +8,7 @@ import { setModalDelete, setModalDeleteData } from 'redux/Contacts/contactsRedus
 import { contactsSelector, filterSelector, isErrorSelector, isLoadingSelector } from 'redux/Contacts/selector';
 import Loader from 'components/Loader/Loader';
 import ErrorMessage from 'components/error/Error';
+import { emojis } from 'constants/Emojis';
 
 export const ContactsList = () => {
 	const error = useSelector(isErrorSelector);
@@ -30,16 +31,19 @@ export const ContactsList = () => {
 		);
 	};
 
+	const getRandomEmoji = () => {
+		return emojis[Math.floor(Math.random() * emojis.length)];
+	};
 	const filterContacts = getContacts();
 
 	return (
 		<ContactsListContainer>
 			{isLoader && <Loader />}
 			{error && <ErrorMessage message={error} />}
-			{filterContacts.map(({ name, number, id, emojis }) => {
+			{filterContacts.map(({ name, number, id, }) => {
 				return (
 					<ContactsListName key={id}>
-						<p><span>{emojis}</span>{name}: {number}</p>
+						<p><span>{getRandomEmoji()}</span>{name}: {number}</p>
 						<div>
 							<a href={"tel:" + number}><ContactsListButton><FiPhoneOutgoing /></ContactsListButton></a>
 							<ContactsListButton><FiEdit /></ContactsListButton>

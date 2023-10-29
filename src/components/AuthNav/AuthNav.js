@@ -1,14 +1,15 @@
+import { UserMenuDiv } from 'components/UserMenu/UserMenuStyled';
 import { NavLink } from 'react-router-dom';
 
 export const AuthNav = () => {
 	return (
-		<div>
+		<UserMenuDiv>
 			<NavLink to="/register">
 				Register
 			</NavLink>
 			<NavLink to="/login">
 				Log In
 			</NavLink>
-		</div>
+		</UserMenuDiv>
 	);
 };
