@@ -9,3 +9,4 @@ export const filterSelector = state => state.contacts.filter;
 export const contactsSelector = state => state.contacts.contacts.items;
 export const isLoadingSelector = state => state.contacts.contacts.isLoading;
 export const isErrorSelector = state => state.contacts.contacts.error;
+export const onEditSelector = state => state.contacts.onEdit;

@@ -17,6 +17,7 @@ const INITIAL_STATE = {
 	modalDelete: false,
 	modalDeleteData: null,
 	themes: LightTheme,
+	onEdit: false,
 
 }
 
@@ -53,6 +54,9 @@ const contactsSlice = createSlice({
 		setTheme(state, action) {
 			state.themes = action.payload;
 		},
+		setOnEdit(state, action) {
+			state.onEdit = action.payload
+		}
 	},
 
 	extraReducers: {
@@ -90,7 +94,7 @@ const contactsSlice = createSlice({
 		[updateContact.rejected]: handleRejected,
 	}
 })
-export const { setContacts, setDeleteContacts, setFilter, setModal, setModalData, setModalDelete, setModalDeleteData, setTheme } =
+export const { setContacts, setDeleteContacts, setFilter, setModal, setModalData, setModalDelete, setModalDeleteData, setTheme, setOnEdit } =
 	contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
 

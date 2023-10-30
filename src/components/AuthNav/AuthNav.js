@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom';
 export const AuthNav = () => {
 	return (
 		<UserMenuDiv>
-			<NavLink activeClassName="active" to="/register">
+			<NavLink activeclassname="active" to="/register">
 				Register
 			</NavLink>
-			<NavLink exact activeClassName="active" to="/login">
+			<NavLink activeclassname="active" to="/login">
 				Log In
 			</NavLink>
 		</UserMenuDiv>
