@@ -13,3 +13,4 @@ export const onEditSelector = state => state.contacts.onEdit;
 export const nameEditSelector = state => state.contacts.EditName;
 export const numberEditSelector = state => state.contacts.EditNumber;
 export const idEditSelector = state => state.contacts.EditId;
+export const bodySelector = state => state.contacts.body;

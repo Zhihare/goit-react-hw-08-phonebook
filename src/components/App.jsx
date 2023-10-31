@@ -1,11 +1,13 @@
 import { ThemeProvider } from "styled-components";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { themesSelector } from 'redux/Contacts/selector';
-import { lazy } from 'react';
+import { lazy, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'components/Loyout/Loyout';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
+import { refreshUser } from "redux/Auth/operations";
+import { useAuth } from "./hooks/useAuth";
 
 
 const HomePage = lazy(() => import('../pages/HomePage'));
@@ -17,7 +19,17 @@ export function App() {
 
   const themes = useSelector(themesSelector);
 
-  return (
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
+
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <ThemeProvider theme={{ themes }} >
 
       <Routes>

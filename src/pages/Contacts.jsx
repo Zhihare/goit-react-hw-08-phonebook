@@ -22,6 +22,7 @@ export default function Contacts() {
 		dispatch(fetchContacts());
 	}, [dispatch]);
 
+
 	return (
 		<ConteinerApp>
 			<ContentApp>

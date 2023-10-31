@@ -1,5 +1,10 @@
 @import-normalize;
+
 /* bring in normalize.css styles */
+:root {
+  --index: calc(1vw + 1vh);
+  --transition: cubic-bezier(.1, .7, 0, 1);
+}
 
 body {
   background: url('/src/img/16.jpg') no-repeat fixed;

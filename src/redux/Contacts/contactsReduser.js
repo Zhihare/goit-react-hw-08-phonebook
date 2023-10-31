@@ -21,6 +21,7 @@ const INITIAL_STATE = {
 	EditName: '',
 	EditNumber: '',
 	EditId: '',
+	body: '/src/img/16.jpg',
 
 }
 
@@ -69,6 +70,9 @@ const contactsSlice = createSlice({
 		setEditId(state, action) {
 			state.EditId = action.payload
 		},
+		setBody(state, action) {
+			state.body = action.payload
+		}
 	},
 
 	extraReducers: {
@@ -107,7 +111,7 @@ const contactsSlice = createSlice({
 		[updateContact.rejected]: handleRejected,
 	}
 })
-export const { setContacts, setDeleteContacts, setFilter, setModal, setModalData, setModalDelete, setModalDeleteData, setTheme, setOnEdit, setEditName, setEditNumber, setEditId } =
+export const { setContacts, setDeleteContacts, setFilter, setModal, setModalData, setModalDelete, setModalDeleteData, setTheme, setOnEdit, setEditName, setEditNumber, setEditId, setBody } =
 	contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
 

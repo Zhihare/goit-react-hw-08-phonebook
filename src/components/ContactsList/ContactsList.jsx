@@ -125,10 +125,10 @@ export const ContactsList = () => {
 						{onEditActive && id === editId ?
 							<ContactListEditForm onSubmit={onHandleClickSubmit}>
 								<ContactListEditLabel>
-									<ContactListEditInput onChange={handleNameChenge} value={editName} type="text" name="name" required />
+									<ContactListEditInput onChange={handleNameChenge} value={editName} type="text" name="name" required maxLength={11} />
 								</ContactListEditLabel>
 								<ContactListEditLabel>
-									<ContactListEditInput onChange={handleNumberChenge} value={editNumber} type="tel" name="number" required />
+									<ContactListEditInput onChange={handleNumberChenge} value={editNumber} type="tel" name="number" required maxLength={11} />
 								</ContactListEditLabel>
 								<div>
 									<ContactsListButton type="submit"><LuSave size={18} /> </ContactsListButton>
