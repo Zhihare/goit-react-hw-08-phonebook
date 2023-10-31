@@ -47,3 +47,28 @@ export const ContactsListButton = styled.button`
 		color: ${(props) => props.theme.themes.buttonHover};
 	}
 `
+
+export const ContactListEditForm = styled.form`
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    height: 50px;
+
+div{
+    display: flex;
+    margin-left: 27px;
+}
+`
+
+export const ContactListEditLabel = styled.label`
+    width: 150px; 
+
+`
+
+export const ContactListEditInput = styled.input`
+    width:100%;
+    background-color: ${(props) => props.theme.themes.tagLineColor};
+    border-style: ridge;
+    color: ${(props) => props.theme.themes.titleColor};
+`

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { ContainerContactsForm, ContainerContactsLabel, ConteinerContactsButton, ConteinerContactsInput } from './CotactsFormStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter, setModal, setModalData } from 'redux/Contacts/contactsReduser';
-import { nanoid } from "nanoid";
+// import { nanoid } from "nanoid";
 import { contactsSelector } from 'redux/Contacts/selector';
 import { addContact } from 'redux/Contacts/operations';
 import { toast } from 'react-toastify';
@@ -50,7 +50,7 @@ export const ContactsForm = () => {
 		}
 
 		const newContact = {
-			id: nanoid(),
+			// id: nanoid(),
 			name,
 			number,
 		};

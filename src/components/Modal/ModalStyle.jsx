@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const Overlay = styled.div`
 	 position: fixed;
-  top: -20vh;
+  top: -25vh;
   left: -50vw;
   right: -50vw;
-  bottom: -10vh;
+  bottom: -20vh;
   background-color: rgba(0, 0, 0, 0.8);
   
 `

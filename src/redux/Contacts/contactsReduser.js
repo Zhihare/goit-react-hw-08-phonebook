@@ -18,6 +18,9 @@ const INITIAL_STATE = {
 	modalDeleteData: null,
 	themes: LightTheme,
 	onEdit: false,
+	EditName: '',
+	EditNumber: '',
+	EditId: '',
 
 }
 
@@ -56,7 +59,16 @@ const contactsSlice = createSlice({
 		},
 		setOnEdit(state, action) {
 			state.onEdit = action.payload
-		}
+		},
+		setEditName(state, action) {
+			state.EditName = action.payload
+		},
+		setEditNumber(state, action) {
+			state.EditNumber = action.payload
+		},
+		setEditId(state, action) {
+			state.EditId = action.payload
+		},
 	},
 
 	extraReducers: {
@@ -88,13 +100,14 @@ const contactsSlice = createSlice({
 			state.contacts.isLoading = false;
 			state.contacts.error = null;
 			const index = state.contacts.items.findIndex(item => item.id === action.payload.id);
-			state.contacts.items.splice(index, 1);
+			console.log(action.payload);
+			state.contacts.items.fill({ "name": state.contacts.EditName, "number": state.contacts.EditNumber }, index);
 
 		},
 		[updateContact.rejected]: handleRejected,
 	}
 })
-export const { setContacts, setDeleteContacts, setFilter, setModal, setModalData, setModalDelete, setModalDeleteData, setTheme, setOnEdit } =
+export const { setContacts, setDeleteContacts, setFilter, setModal, setModalData, setModalDelete, setModalDeleteData, setTheme, setOnEdit, setEditName, setEditNumber, setEditId } =
 	contactsSlice.actions;
 export const contactsReducer = contactsSlice.reducer;
 

@@ -10,3 +10,6 @@ export const contactsSelector = state => state.contacts.contacts.items;
 export const isLoadingSelector = state => state.contacts.contacts.isLoading;
 export const isErrorSelector = state => state.contacts.contacts.error;
 export const onEditSelector = state => state.contacts.onEdit;
+export const nameEditSelector = state => state.contacts.EditName;
+export const numberEditSelector = state => state.contacts.EditNumber;
+export const idEditSelector = state => state.contacts.EditId;
