@@ -21,7 +21,7 @@ const INITIAL_STATE = {
 	EditName: '',
 	EditNumber: '',
 	EditId: '',
-	body: '/src/img/16.jpg',
+	body: '',
 
 }
 
