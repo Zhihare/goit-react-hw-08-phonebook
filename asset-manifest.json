@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.db37a1c4.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.77d54ffd.js",
-    "static/js/796.0dbc0b47.chunk.js": "/goit-react-hw-08-phonebook/static/js/796.0dbc0b47.chunk.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.d49713fe.js",
+    "static/js/796.61c4dcb5.chunk.js": "/goit-react-hw-08-phonebook/static/js/796.61c4dcb5.chunk.js",
     "static/js/720.180b3259.chunk.js": "/goit-react-hw-08-phonebook/static/js/720.180b3259.chunk.js",
     "static/js/993.e3ef4873.chunk.js": "/goit-react-hw-08-phonebook/static/js/993.e3ef4873.chunk.js",
     "static/js/604.ecc8506f.chunk.js": "/goit-react-hw-08-phonebook/static/js/604.ecc8506f.chunk.js",
@@ -11,20 +11,20 @@
     "static/media/10.jpg": "/goit-react-hw-08-phonebook/static/media/10.448ea00a689fec5e8341.jpg",
     "static/media/22.jpg": "/goit-react-hw-08-phonebook/static/media/22.9cd1257c264a46312104.jpg",
     "static/media/46.jpg": "/goit-react-hw-08-phonebook/static/media/46.a99ca982473a2e782e47.jpg",
-    "static/media/1626124597_52-kartinkin-com-p-teksturi-s-kartami-normalei-krasivo-58.jpg": "/goit-react-hw-08-phonebook/static/media/1626124597_52-kartinkin-com-p-teksturi-s-kartami-normalei-krasivo-58.976c14b694d0e4107d0b.jpg",
     "static/media/16.jpg": "/goit-react-hw-08-phonebook/static/media/16.a9092d4922c966834af9.jpg",
     "static/media/34.jpg": "/goit-react-hw-08-phonebook/static/media/34.7aa3e7bbfe61f047a003.jpg",
-    "static/media/1625928437_22-kartinkin-com-p-tekstura-khrushchevki-krasivo-31.jpg": "/goit-react-hw-08-phonebook/static/media/1625928437_22-kartinkin-com-p-tekstura-khrushchevki-krasivo-31.154c3350f9fc8d72aeb5.jpg",
-    "static/media/63.jpg": "/goit-react-hw-08-phonebook/static/media/63.dbc6e14bd588b224da57.jpg",
-    "static/media/20.jpg": "/goit-react-hw-08-phonebook/static/media/20.3fbb561680a10e3f574f.jpg",
     "static/media/1.jpg": "/goit-react-hw-08-phonebook/static/media/1.a40adfc2171fbe419931.jpg",
-    "static/media/1626164237_4-kartinkin-com-p-tekstura-dereva-dlya-blendera-krasivo-4.jpg": "/goit-react-hw-08-phonebook/static/media/1626164237_4-kartinkin-com-p-tekstura-dereva-dlya-blendera-krasivo-4.fc11eb9dca02628600b8.jpg",
     "static/media/60.jpg": "/goit-react-hw-08-phonebook/static/media/60.b09b5a435cb31b27f1bc.jpg",
+    "static/media/1625928437_22-kartinkin-com-p-tekstura-khrushchevki-krasivo-31.jpg": "/goit-react-hw-08-phonebook/static/media/1625928437_22-kartinkin-com-p-tekstura-khrushchevki-krasivo-31.0fa5be1ac3b4c29ce015.jpg",
+    "static/media/1626124597_52-kartinkin-com-p-teksturi-s-kartami-normalei-krasivo-58.jpg": "/goit-react-hw-08-phonebook/static/media/1626124597_52-kartinkin-com-p-teksturi-s-kartami-normalei-krasivo-58.dcf76448bd073308a1ee.jpg",
+    "static/media/1626164237_4-kartinkin-com-p-tekstura-dereva-dlya-blendera-krasivo-4.jpg": "/goit-react-hw-08-phonebook/static/media/1626164237_4-kartinkin-com-p-tekstura-dereva-dlya-blendera-krasivo-4.5d3ff82704fdc453bb52.jpg",
     "static/media/35.jpg": "/goit-react-hw-08-phonebook/static/media/35.868442bb904235febe17.jpg",
+    "static/media/20.jpg": "/goit-react-hw-08-phonebook/static/media/20.7cce62d5f89c642f78c4.jpg",
+    "static/media/63.jpg": "/goit-react-hw-08-phonebook/static/media/63.04a3a5613102abbd78c3.jpg",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.db37a1c4.css.map": "/goit-react-hw-08-phonebook/static/css/main.db37a1c4.css.map",
-    "main.77d54ffd.js.map": "/goit-react-hw-08-phonebook/static/js/main.77d54ffd.js.map",
-    "796.0dbc0b47.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/796.0dbc0b47.chunk.js.map",
+    "main.d49713fe.js.map": "/goit-react-hw-08-phonebook/static/js/main.d49713fe.js.map",
+    "796.61c4dcb5.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/796.61c4dcb5.chunk.js.map",
     "720.180b3259.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/720.180b3259.chunk.js.map",
     "993.e3ef4873.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/993.e3ef4873.chunk.js.map",
     "604.ecc8506f.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/604.ecc8506f.chunk.js.map",
@@ -33,6 +33,6 @@
   },
   "entrypoints": [
     "static/css/main.db37a1c4.css",
-    "static/js/main.77d54ffd.js"
+    "static/js/main.d49713fe.js"
   ]
 }
