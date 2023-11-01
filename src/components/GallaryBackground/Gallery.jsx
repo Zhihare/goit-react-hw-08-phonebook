@@ -16,7 +16,6 @@ export const Gallery = () => {
 
 	const onHandleClick = (img) => {
 		dispatch(setBody(img));
-		console.log(img);
 	};
 
 	return (
