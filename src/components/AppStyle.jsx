@@ -62,7 +62,11 @@ export const ContentApp = styled.div`
  `
 
 export const TitleApp = styled.h1`
- text-transform: uppercase;`
+ text-transform: uppercase;
+color:${(props) => props.theme.themes.titleColor};
+ `
+
+
 
 export const ToogleDarkMode = styled.button`
   cursor: pointer;

@@ -1,7 +1,15 @@
 import styled from 'styled-components'
 
+export const TitleAppHome = styled.h1`
+ text-transform: uppercase;
+color: white;
+    text-align: center;
+    margin-top: 50px;
+`
+
 export const GalleryWrapper = styled.div`
 	display: flex;
+	flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 	height: 50vh;

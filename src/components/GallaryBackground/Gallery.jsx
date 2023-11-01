@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { GalleryWrapper } from './GalleryStyle';
+import { GalleryWrapper, TitleAppHome } from './GalleryStyle';
 import { useDispatch } from 'react-redux';
 import { linkImg } from './linkImg';
 import { setBody } from 'redux/Contacts/contactsReduser';
@@ -20,14 +20,17 @@ export const Gallery = () => {
 	};
 
 	return (
-		<GalleryWrapper className='wrapper'>
-			<div className='items'>
-				{linkImg.map(({ name, link }) => {
-					return (
-						<div key={name} onClick={() => onHandleClick(name)} className="item" style={{ backgroundImage: `url(${name})` }}></div>
-					)
-				})}
-			</div>
-		</GalleryWrapper>
+		<>
+			<TitleAppHome className='homeTitle'>Choose background</TitleAppHome>
+			<GalleryWrapper className='wrapper'>
+				<div className='items'>
+					{linkImg.map(({ name, link }) => {
+						return (
+							<div key={name} onClick={() => onHandleClick(name)} className="item" style={{ backgroundImage: `url(${name})` }}></div>
+						)
+					})}
+				</div>
+			</GalleryWrapper>
+		</>
 	)
 }

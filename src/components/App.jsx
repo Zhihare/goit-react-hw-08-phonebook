@@ -37,8 +37,7 @@ export function App() {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
-      width: '100vw',
-      height: '100%',
+      height: '150vh',
       margin: '0',
     }}>
       <ThemeProvider theme={{ themes }} >

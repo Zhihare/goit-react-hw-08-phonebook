@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContactsListContainer = styled.div`
     width: 100%;
-    height: 500px;
+    height: 365px;
     overflow-y: auto;
 
     
