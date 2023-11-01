@@ -13,6 +13,7 @@ import ErrorMessage from 'components/error/Error';
 import { emojis } from 'constants/Emojis';
 import { addContact, deleteContact } from 'redux/Contacts/operations';
 
+
 export const ContactsList = () => {
 	const error = useSelector(isErrorSelector);
 	const isLoader = useSelector(isLoadingSelector);

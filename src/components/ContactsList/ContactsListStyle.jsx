@@ -4,6 +4,7 @@ export const ContactsListContainer = styled.div`
     width: 100%;
     height: 500px;
     overflow-y: auto;
+
     
     &::-webkit-scrollbar-track
 {
@@ -52,17 +53,18 @@ export const ContactListEditForm = styled.form`
       display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: calc(var(--index)*1.8);
     height: 50px;
 
 div{
     display: flex;
-    margin-left: 27px;
+   
+    /* margin-left:calc(var(--index)*1.8); */
 }
 `
 
 export const ContactListEditLabel = styled.label`
-    width: 150px; 
+    max-width: 150px; 
 
 `
 

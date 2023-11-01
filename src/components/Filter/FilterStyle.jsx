@@ -2,10 +2,6 @@ import styled from 'styled-components';
 
 
 export const FilterLabel = styled.label`
-	display: flex;
-    flex-direction: column;
-    align-items: center;
-	gap: 3px;
 	margin-bottom: 10px;
 	position: relative;
 	`
@@ -19,7 +15,7 @@ export const FilterInput = styled.input`
 `
 export const FilterSpan = styled.span`
     position: absolute;
-	left: 145px;
-    top: 6px;
+	left: 2%;
+    top: 2%;
 	
 `

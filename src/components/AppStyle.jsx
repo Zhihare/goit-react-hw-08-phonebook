@@ -1,17 +1,25 @@
+
 import styled from 'styled-components';
+
+
 
 export const ConteinerApp = styled.div`
 
- width: 600px;
-  margin: 50px auto;
+ width: calc(var(--index)*40);
+  max-width: 600px;
+  margin: 50px auto 0 auto;
   padding: 2px;
-  /* background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="),
+ 
+   /* background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="),
     url("data:image/gif;base64,R0lGODlhAQABAPAAAOqrAP///yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="),
-    url("data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="); */
+    url("data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==");  */
   background-repeat: no-repeat;
   background-size: 0 2px, 0 100%, 0% 2px;
+  border-radius: 20px;
   background-position: top center, top center, bottom center;
   -webkit-animation: drawBorderFromCenter 4s;
+
+ 
 
 @-webkit-keyframes drawBorderFromCenter {
   0% {
@@ -28,6 +36,11 @@ export const ConteinerApp = styled.div`
   }
 }
 
+ &.homeConteiner{
+    max-width: 900px;
+    margin-top: calc(var(--index)*5);
+  }
+
 `
 
 export const ContentApp = styled.div`
@@ -39,6 +52,12 @@ export const ContentApp = styled.div`
   color:${(props) => props.theme.themes.titleColor};
   border: 2px solid ${(props) => props.theme.themes.border};
   border-radius: 20px;
+   min-width: 300px;
+
+    &.homePage{
+    font-size: 20px;
+
+  }
 
  `
 
@@ -55,4 +74,6 @@ export const ToogleDarkMode = styled.button`
 	&:hover{
 		color: ${(props) => props.theme.themes.buttonHover};
 	}
+
+  
 `
