@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { NavigationNav, NavigationNavMobile } from './NavigationStyled';
+import { NavigationNavMobile } from './NavigationStyled';
 import { LiaHomeSolid } from 'react-icons/lia'
 import { RiContactsBook2Line } from 'react-icons/ri'
 import { DivIcon } from 'components/AppBar/AppBarStyle';

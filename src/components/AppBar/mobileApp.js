@@ -1,8 +1,6 @@
-import { Navigation } from '../Navigation/Navigation';
-import { UserMenu } from '../UserMenu/UserMenu';
-import { AuthNav } from '../AuthNav/AuthNav';
+
 import { useAuth } from '../hooks/useAuth';
-import { AppBarHeader, DivIcon, MobileAppBarHeader } from './AppBarStyle';
+import { DivIcon, MobileAppBarHeader } from './AppBarStyle';
 import { useDispatch, useSelector } from 'react-redux';
 import { GoSun } from 'react-icons/go';
 import { HiMoon } from 'react-icons/hi';

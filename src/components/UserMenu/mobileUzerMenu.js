@@ -1,7 +1,7 @@
 import { useAuth } from 'components/hooks/useAuth';
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/Auth/operations';
-import { UserMenuDiv, UserMenuMobileDiv } from './UserMenuStyled';
+import { UserMenuMobileDiv } from './UserMenuStyled';
 import { TbLogout } from 'react-icons/tb'
 import { ContactsListButton } from 'components/ContactsList/ContactsListStyle';
 import { DivIcon } from 'components/AppBar/AppBarStyle';
