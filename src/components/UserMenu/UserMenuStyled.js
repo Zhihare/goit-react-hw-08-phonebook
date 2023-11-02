@@ -19,3 +19,22 @@ export const UserMenuDiv = styled.div`
 	}
 
 `
+
+export const UserMenuMobileDiv = styled.div`
+	display: flex;
+	align-items: center;
+
+		p{
+			text-transform: uppercase;
+			font-size: 30px;
+			text-align: center;
+			color: ${(props) => props.theme.themes.buttonColor};
+			margin: 0;
+		}
+
+		.active{
+		color:${(props) => props.theme.themes.active};	
+	}
+
+`
+

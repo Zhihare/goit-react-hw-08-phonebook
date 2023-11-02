@@ -2,12 +2,41 @@ import styled from 'styled-components'
 
 export const TitleAppHome = styled.h1`
  text-transform: uppercase;
-color: white;
+ color: white;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0;
+    padding-top: 60px;
 `
 
 export const GalleryWrapper = styled.div`
+@media(max-width: 800px){
+display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+	height: 50vh;
+	margin-top: 50px;
+	overflow-y: scroll;
+
+	
+.items{
+	display: flex;
+	gap: 0.4rem;
+	perspective: 500px;
+}
+.item{
+	width: calc(var(--index)*3);
+	height: calc(var(--index)*17);
+	background-size: cover;
+	background-position: center;
+	cursor: pointer;
+	transition: transform 1.25s var(--transition);
+}
+
+
+}
+
+@media(min-width: 800px){
 	display: flex;
 	flex-wrap: wrap;
     align-items: center;
@@ -16,8 +45,6 @@ export const GalleryWrapper = styled.div`
 	margin-top: 50px;
 
 	
-
-
 .items{
 	display: flex;
 	gap: 0.4rem;
@@ -86,5 +113,6 @@ export const GalleryWrapper = styled.div`
 .item:has(+*+*+*+ :hover){
 	transform: translateZ(calc(var(--index)*0.8)) rotateY(-17deg);
 	z-index: -4;
+}
 }
 `

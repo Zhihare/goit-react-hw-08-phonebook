@@ -1,0 +1,27 @@
+import { useAuth } from 'components/hooks/useAuth';
+import { useDispatch } from 'react-redux';
+import { logOut } from 'redux/Auth/operations';
+import { UserMenuDiv, UserMenuMobileDiv } from './UserMenuStyled';
+import { TbLogout } from 'react-icons/tb'
+import { ContactsListButton } from 'components/ContactsList/ContactsListStyle';
+import { DivIcon } from 'components/AppBar/AppBarStyle';
+
+export const MobileUserMenu = () => {
+	const dispatch = useDispatch();
+	const { user } = useAuth();
+
+	return (
+		<UserMenuMobileDiv>
+			<DivIcon>
+				<p>{user.name.charAt(0)}</p>
+				<span>{user.name}</span>
+			</DivIcon>
+			<DivIcon>
+				<ContactsListButton className='appButton' type="button" onClick={() => dispatch(logOut())}>
+					<TbLogout size={30} />
+				</ContactsListButton>
+				<span>Logout</span>
+			</DivIcon>
+		</UserMenuMobileDiv>
+	);
+};

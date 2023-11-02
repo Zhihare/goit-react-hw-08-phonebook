@@ -17,3 +17,18 @@ export const NavigationNav = styled.nav`
 	}
 
 `
+
+export const NavigationNavMobile = styled.nav`
+	display: flex;
+    justify-content: space-around;
+	align-items: center;
+	color: ${(props) => props.theme.themes.buttonColor};
+
+
+
+	
+	.active{
+		color: ${(props) => props.theme.themes.active};	
+	}
+
+`

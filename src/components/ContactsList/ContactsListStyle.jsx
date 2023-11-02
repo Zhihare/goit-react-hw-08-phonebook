@@ -24,6 +24,12 @@ export const ContactsListContainer = styled.div`
 }
 `
 export const ContactsListName = styled.div`
+  @media(max-width: 600px){
+    margin: 0 10px;
+    font-size: 12px;
+
+  }
+
      display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,7 +49,7 @@ export const ContactsListButton = styled.button`
 	transition-duration: .8s;
     color: ${(props) => props.theme.themes.buttonColor};
     cursor: pointer;
-
+  
 	&:hover{
 		color: ${(props) => props.theme.themes.buttonHover};
 	}
