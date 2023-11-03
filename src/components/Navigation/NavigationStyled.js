@@ -31,4 +31,25 @@ export const NavigationNavMobile = styled.nav`
 		color: ${(props) => props.theme.themes.active};	
 	}
 
+	svg{
+		transition: .5s;
+	} 
+		a.active svg{
+		transform: translateY(-25px);
+	}
+
+	span{
+		transition: .5s;
+		opacity: 0;
+	}
+		a.active span{
+			opacity: 1;
+	}
+
+	a.active .circle{
+			transform: translateY(-22px) scale(1);
+	}
+
+
+
 `

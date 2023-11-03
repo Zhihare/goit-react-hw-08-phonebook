@@ -4,7 +4,7 @@ export const LightTheme = {
 	tagLineColor: "white",
 	buttonColor: "black",
 	border: "rgba(25, 25, 25, .5)",
-	active: "yellow",
+	active: "black",
 	hover: "white",
 	buttonHover: "white",
 	mobileBar: "white",

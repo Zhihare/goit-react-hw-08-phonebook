@@ -14,21 +14,25 @@ export const MobileNavigation = () => {
 				<DivIcon>
 					<LiaHomeSolid size={30} />
 					<span>Home</span>
+					<span className='circle'></span>
+					{/* <div className='indicator'></div> */}
 				</DivIcon>
 
 			</NavLink>
 			{isLoggedIn && (
-
 				<NavLink activeclassname="active" to="/contacts">
 					<DivIcon>
 						<RiContactsBook2Line size={30} />
 						<span>Contacts</span>
+						<span className='circle'></span>
+						{/* <div className='indicator'></div> */}
 					</DivIcon>
 				</NavLink>
 
 
 			)
 			}
+
 		</NavigationNavMobile >
 	);
 };
