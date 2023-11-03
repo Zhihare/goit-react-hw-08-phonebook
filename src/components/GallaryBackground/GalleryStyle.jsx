@@ -14,7 +14,6 @@ display: flex;
 	flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-	height: 50vh;
 	margin-top: 50px;
 	overflow-y: scroll;
 
@@ -41,7 +40,6 @@ display: flex;
 	flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-	height: 50vh;
 	margin-top: 50px;
 
 	
@@ -115,4 +113,9 @@ display: flex;
 	z-index: -4;
 }
 }
+
+@media(min-width: 1800px){
+	.items{
+	perspective: 1000px;
+}}
 `

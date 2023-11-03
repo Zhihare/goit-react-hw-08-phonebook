@@ -11,7 +11,9 @@ export const ConteinerApp = styled.div`
   padding: 50px 0;
  
   border-radius: 20px;
-
+ @media(max-width: 600px){
+        padding-top: 0;
+      }
 
 
 

@@ -12,6 +12,8 @@ import Loader from 'components/Loader/Loader';
 import ErrorMessage from 'components/error/Error';
 import { emojis } from 'constants/Emojis';
 import { addContact, deleteContact } from 'redux/Contacts/operations';
+import Media from 'react-media';
+import { Fragment } from 'react';
 
 
 export const ContactsList = () => {
@@ -116,6 +118,13 @@ export const ContactsList = () => {
 
 	const filterContacts = getContacts();
 
+	const truncateString = (s, w) => {
+		const nameStroce = s.length > w ? s.slice(0, w).trim() + "..." : s;
+		return nameStroce;
+	};
+
+	console.log(truncateString('sddgdfgdfgdfhdfh', 5));
+
 	return (
 		<ContactsListContainer>
 			{isLoader && <Loader />}
@@ -124,26 +133,40 @@ export const ContactsList = () => {
 				return (
 					<ContactsListName key={id}>
 						{onEditActive && id === editId ?
-							<ContactListEditForm onSubmit={onHandleClickSubmit}>
-								<ContactListEditLabel>
-									<ContactListEditInput onChange={handleNameChenge} value={editName} type="text" name="name" required maxLength={11} />
-								</ContactListEditLabel>
-								<ContactListEditLabel>
-									<ContactListEditInput onChange={handleNumberChenge} value={editNumber} type="tel" name="number" required maxLength={11} />
-								</ContactListEditLabel>
-								<div>
-									<ContactsListButton type="submit"><LuSave size={18} /> </ContactsListButton>
-									<ContactsListButton onClick={CloseEdit}><MdOutlineCancel size={18} /> </ContactsListButton>
-								</div>
-							</ContactListEditForm> :
-							<>
-								<p><span>{getRandomEmoji(name)}</span>{name}: {number}</p>
-								<div>
+							<div className='contactItem'>
+								<ContactListEditForm onSubmit={onHandleClickSubmit}>
+									<ContactListEditLabel>
+										<ContactListEditInput onChange={handleNameChenge} value={editName} type="text" name="name" required maxLength={14} />
+									</ContactListEditLabel>
+									<ContactListEditLabel>
+										<ContactListEditInput onChange={handleNumberChenge} value={editNumber} type="tel" name="number" required maxLength={14} />
+									</ContactListEditLabel>
+									<div>
+										<ContactsListButton type="submit"><LuSave size={18} /> </ContactsListButton>
+										<ContactsListButton onClick={CloseEdit}><MdOutlineCancel size={18} /> </ContactsListButton>
+									</div>
+								</ContactListEditForm>
+							</div> :
+							<div className='contactItem'>
+								<Media queries={{
+									mobile: "(max-width: 370px)",
+									small: "(min-width: 371px) and (max-width: 600px)",
+									medium: "(min-width: 600px)",
+								}}>
+									{matches => (
+										<Fragment>
+											{matches.mobile && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 6)}: {truncateString(number, 9)}</p></>}
+											{matches.small && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 6)}: {truncateString(number, 12)}</p></>}
+											{matches.medium && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 12)}: {truncateString(number, 12)}</p></>}
+										</Fragment>
+									)}
+								</Media>
+								<div className='activeButton'>
 									<a href={"tel:" + number}><ContactsListButton><FiPhoneOutgoing /></ContactsListButton></a>
 									<ContactsListButton onClick={() => onClickEdit(id, name, number)}><FiEdit /></ContactsListButton>
 									<ContactsListButton onClick={() => onOpenModalDelete(id)}><RiDeleteBin6Line /> </ContactsListButton>
 								</div>
-							</>
+							</div>
 						}
 					</ContactsListName>
 				);

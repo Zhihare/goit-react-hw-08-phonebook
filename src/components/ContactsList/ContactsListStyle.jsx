@@ -26,21 +26,41 @@ export const ContactsListContainer = styled.div`
 export const ContactsListName = styled.div`
   @media(max-width: 600px){
     margin: 0 10px;
-    font-size: 12px;
+    font-size: 16px;
 
   }
 
      display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
 
     span{
         display: inline-block;
         width: 15px;
         margin-right: 15px;
     }
+
+    p{
+            margin-top: 8px;
+    margin-bottom: 8px;
+    }
+
+    .activeButton{
+        font-size: 20px;
+        margin-left: auto;
+    }
+
+    .contactItem{
+         display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        border-bottom: 2px solid  ${(props) => props.theme.themes.tagLineColor};
+            padding:8px 0;
+    }
+    
 `
 
 export const ContactsListButton = styled.button`

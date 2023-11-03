@@ -86,11 +86,11 @@ export const ContactsForm = () => {
 		<ContainerContactsForm onSubmit={handleSubmit}>
 			<ContainerContactsLabel>
 				<span>Name</span>
-				<ConteinerContactsInput onChange={handleNameChenge} value={name} type="text" name="name" required maxLength={11} />
+				<ConteinerContactsInput onChange={handleNameChenge} value={name} type="text" name="name" required maxLength={14} />
 			</ContainerContactsLabel>
 			<ContainerContactsLabel>
 				<span>Number</span>
-				<ConteinerContactsInput onChange={handleNumberChenge} value={number} type="tel" name="number" required maxLength={11} />
+				<ConteinerContactsInput onChange={handleNumberChenge} value={number} type="tel" name="number" required maxLength={14} />
 			</ContainerContactsLabel>
 			<ConteinerContactsButton type="submit" >Add contact</ConteinerContactsButton>
 		</ContainerContactsForm >
