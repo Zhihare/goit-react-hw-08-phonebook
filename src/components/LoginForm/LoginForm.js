@@ -19,7 +19,7 @@ export const LoginForm = () => {
 	};
 
 	return (
-		<ConteinerApp>
+		<ConteinerApp className='login'>
 			<ContentApp>
 				<TitleApp title="Login">Login</TitleApp>
 				<ContainerContactsForm onSubmit={handleSubmit} autoComplete="off">

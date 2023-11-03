@@ -123,8 +123,6 @@ export const ContactsList = () => {
 		return nameStroce;
 	};
 
-	console.log(truncateString('sddgdfgdfgdfhdfh', 5));
-
 	return (
 		<ContactsListContainer>
 			{isLoader && <Loader />}

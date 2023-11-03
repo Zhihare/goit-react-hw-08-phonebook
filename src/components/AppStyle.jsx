@@ -5,14 +5,19 @@ import styled from 'styled-components';
 
 export const ConteinerApp = styled.div`
 
- /* width: calc(var(--index)*40); */
+  &.login{
+     padding: 30vh 0 30vh 0;
+  }
+
   max-width: 600px;
   margin: 0 auto;
   padding: 50px 0;
- 
+  padding: 30vh 0 50vh 0;
   border-radius: 20px;
+
+
  @media(max-width: 600px){
-        padding-top: 0;
+          padding: 0 0 40px 0;
       }
 
 

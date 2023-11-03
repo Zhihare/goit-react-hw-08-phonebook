@@ -21,7 +21,7 @@ export const RegisterForm = () => {
 	};
 
 	return (
-		<ConteinerApp>
+		<ConteinerApp className='login'>
 			<ContentApp>
 				<TitleApp title="Registr">Register</TitleApp>
 				<ContainerContactsForm onSubmit={handleSubmit} autoComplete="off">
