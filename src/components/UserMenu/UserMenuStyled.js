@@ -8,10 +8,10 @@ export const UserMenuDiv = styled.div`
 		a{
 	padding: 6px;
 	border-radius: 10px;
-	border: 2px solid transparent;
 	}
 	@media(max-width: 600px){
 		.active{
+			border-color:${(props) => props.theme.themes.mobileBar};
 			border: none;
 		 }
 	}
