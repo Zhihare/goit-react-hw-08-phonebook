@@ -11,8 +11,7 @@ export const ConteinerApp = styled.div`
 
   max-width: 600px;
   margin: 0 auto;
-  padding: 50px 0;
-  padding: 30vh 0 50vh 0;
+  padding: 100px 0 50px 0;
   border-radius: 20px;
 
 
