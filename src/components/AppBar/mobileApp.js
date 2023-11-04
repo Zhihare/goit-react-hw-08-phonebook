@@ -35,7 +35,6 @@ export const MobileAppBar = () => {
 		<MobileAppBarHeader>
 			<DivIcon>
 				<ToogleDarkMode onClick={changeTheme}>{icon}</ToogleDarkMode>
-				<span>Theme</span>
 			</DivIcon>
 			<MobileNavigation />
 			{isLoggedIn ? <MobileUserMenu /> : <MobileAuthNav />}

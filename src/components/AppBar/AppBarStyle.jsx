@@ -130,7 +130,7 @@ padding:0 0 10px 0;
 		background: ${(props) => props.theme.themes.mobileBar};
 		border-radius: 50%;
 		border: 2px solid  ${(props) => props.theme.themes.action};
-		transform: translateY(-22px) scale(0);
+		transform: translateY(-24px) scale(0);
 	}
 
 `

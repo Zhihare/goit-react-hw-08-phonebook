@@ -9,16 +9,16 @@ export const TitleAppHome = styled.h1`
 `
 
 export const GalleryWrapper = styled.div`
-@media(max-width: 800px){
-display: flex;
+@media(max-width: 600px){
+	position: relative;
+ 	display: flex;
 	flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-	margin-top: 50px;
+	margin: 50px 20px 0 20px;
 	overflow-y: scroll;
 
 	
-.items{
+.items{	
 	display: flex;
 	gap: 0.4rem;
 	perspective: 500px;
@@ -32,10 +32,22 @@ display: flex;
 	transition: transform 1.25s var(--transition);
 }
 
+.swipe{
+	position: absolute;
+	left: 47%;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.items:focus> button .swipe{
+	display: none;
+}
+
 
 }
 
-@media(min-width: 800px){
+@media(min-width: 600px){
 	display: flex;
 	flex-wrap: wrap;
     align-items: center;
@@ -55,6 +67,10 @@ display: flex;
 	background-position: center;
 	cursor: pointer;
 	transition: transform 1.25s var(--transition);
+}
+
+button{
+	display: none;
 }
 
 .item::before, .item::after{

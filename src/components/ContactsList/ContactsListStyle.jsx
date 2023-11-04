@@ -38,8 +38,11 @@ export const ContactsListName = styled.div`
 
     span{
         display: inline-block;
-        width: 15px;
-        margin-right: 15px;
+        width: 20px;
+        margin-right: 10px;
+        background-color: ${(props) => props.theme.themes.mobileBar};
+        border-radius:50%;
+        border: 2px solid ${(props) => props.theme.themes.hover};
     }
 
     p{
@@ -80,7 +83,8 @@ export const ContactListEditForm = styled.form`
     align-items: center;
     justify-content: space-between;
     gap: calc(var(--index)*1.8);
-    height: 50px;
+    height: 34px;
+    padding-left: 28px;
 
 div{
     display: flex;
@@ -91,6 +95,7 @@ div{
 
 export const ContactListEditLabel = styled.label`
     max-width: 150px; 
+    display: contents;
 
 `
 

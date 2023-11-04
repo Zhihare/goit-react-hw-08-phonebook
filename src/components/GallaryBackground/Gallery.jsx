@@ -4,6 +4,8 @@ import { GalleryWrapper, TitleAppHome } from './GalleryStyle';
 import { useDispatch } from 'react-redux';
 import { linkImg } from './linkImg';
 import { setBody } from 'redux/Contacts/contactsReduser';
+import { PiHandSwipeRightLight } from 'react-icons/pi';
+
 
 
 
@@ -18,6 +20,7 @@ export const Gallery = () => {
 		dispatch(setBody(img));
 	};
 
+
 	return (
 		<>
 			<TitleAppHome className='homeTitle'>Choose background</TitleAppHome>
@@ -29,6 +32,9 @@ export const Gallery = () => {
 						)
 					})}
 				</div>
+				<button className='swipe'><PiHandSwipeRightLight size={30} /></button>
+
+
 			</GalleryWrapper>
 		</>
 	)

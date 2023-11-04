@@ -15,11 +15,16 @@ export const UserMenuDiv = styled.div`
 			border: none;
 		 }
 	}
+
+
 	.active{
 		color:${(props) => props.theme.themes.active};
 		border-color:${(props) => props.theme.themes.active};
 	}
-		a.active p{
+		a.active svg{
+		transform: translateY(-25px);
+	}
+	a.active p{
 		transform: translateY(-25px);
 	}
 
@@ -32,7 +37,7 @@ export const UserMenuDiv = styled.div`
 	}
 
 	a.active .circle{
-			transform: translateY(-22px) scale(1);
+			transform: translateY(-24px) scale(1);
 	}
 
 

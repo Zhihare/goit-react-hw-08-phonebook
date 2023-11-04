@@ -35,7 +35,7 @@ export const NavigationNavMobile = styled.nav`
 		transition: .5s;
 	} 
 		a.active svg{
-		transform: translateY(-25px);
+		transform: translateY(-23px);
 	}
 
 	span{

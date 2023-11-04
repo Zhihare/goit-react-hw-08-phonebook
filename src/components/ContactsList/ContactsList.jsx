@@ -123,6 +123,7 @@ export const ContactsList = () => {
 		return nameStroce;
 	};
 
+
 	return (
 		<ContactsListContainer>
 			{isLoader && <Loader />}
@@ -140,20 +141,20 @@ export const ContactsList = () => {
 										<ContactListEditInput onChange={handleNumberChenge} value={editNumber} type="tel" name="number" required maxLength={14} />
 									</ContactListEditLabel>
 									<div>
-										<ContactsListButton type="submit"><LuSave size={18} /> </ContactsListButton>
-										<ContactsListButton onClick={CloseEdit}><MdOutlineCancel size={18} /> </ContactsListButton>
+										<ContactsListButton type="submit"><LuSave size={20} /> </ContactsListButton>
+										<ContactsListButton onClick={CloseEdit}><MdOutlineCancel size={20} /> </ContactsListButton>
 									</div>
 								</ContactListEditForm>
 							</div> :
 							<div className='contactItem'>
 								<Media queries={{
-									mobile: "(max-width: 370px)",
+									mobile: "(max-width: 371px)",
 									small: "(min-width: 371px) and (max-width: 600px)",
 									medium: "(min-width: 600px)",
 								}}>
 									{matches => (
 										<Fragment>
-											{matches.mobile && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 6)}: {truncateString(number, 9)}</p></>}
+											{matches.mobile && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 10)}</p></>}
 											{matches.small && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 6)}: {truncateString(number, 12)}</p></>}
 											{matches.medium && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 12)}: {truncateString(number, 12)}</p></>}
 										</Fragment>
