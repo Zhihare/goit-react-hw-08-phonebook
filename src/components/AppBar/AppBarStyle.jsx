@@ -23,6 +23,9 @@ export const AppBarHeader = styled.header`
 @media(min-width: 600px){
 	display: flex;
     justify-content: space-around;
+	max-width: 1200px;
+	margin-right: auto;
+    margin-left: auto;
     background-color: ${(props) => props.theme.themes.modalColor};
 	color: ${(props) => props.theme.themes.titleColor};
 	padding: 15px 0; 
@@ -169,7 +172,7 @@ background: radial-gradient(#EF7D55, #F24012);
    }
 }
 
-	}
+	
 
 `
 

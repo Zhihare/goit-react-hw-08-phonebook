@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const Overlay = styled.div`
 	 position: fixed;
-  top: -25vh;
-  left: -50vw;
-  right: -50vw;
-  bottom: -20vh;
+   width:100%;
+   height: 100%;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   
 `
@@ -40,4 +40,5 @@ export const ModalWindow = styled.div`
 `
 export const ModalTitle = styled.p`
 width: 100%
+text-align: center;
 `

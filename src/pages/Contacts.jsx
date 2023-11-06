@@ -33,9 +33,10 @@ export default function Contacts() {
 				<ContactsList />
 
 
-				{modal && <Modal />}
-				{modalDelete && <ModalDelete />}
+
 			</ContentApp>
+			{modal && <Modal />}
+			{modalDelete && <ModalDelete />}
 		</ConteinerApp>
 	);
 

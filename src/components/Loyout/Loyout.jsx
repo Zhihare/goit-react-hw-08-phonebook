@@ -7,7 +7,7 @@ import Media from 'react-media';
 
 export const Layout = () => {
 	return (
-		<div>
+		<>
 			<Media query="(max-width: 600px)" render={() => <MobileAppBar />}
 			/>
 			<Media query="(min-width: 601px)" render={() => <AppBar />}
@@ -15,6 +15,6 @@ export const Layout = () => {
 			<Suspense fallback={<Loader />}>
 				<Outlet />
 			</Suspense>
-		</div>
+		</>
 	);
 };
