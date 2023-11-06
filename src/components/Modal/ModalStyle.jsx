@@ -39,6 +39,6 @@ export const ModalWindow = styled.div`
 
 `
 export const ModalTitle = styled.p`
-width: 100%
+width: 100%;
 text-align: center;
 `
