@@ -14,7 +14,7 @@ export const MobileUserMenu = () => {
 		<UserMenuMobileDiv>
 			<DivIcon>
 
-				<p>{user.name.charAt(0)}</p>
+				<p className='rotateP'>{user.name.charAt(0)}</p>
 				<span>{user.name}</span>
 				<div className='rotateName'></div>
 			</DivIcon>

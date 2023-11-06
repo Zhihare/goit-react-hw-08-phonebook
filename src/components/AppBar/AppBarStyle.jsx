@@ -79,9 +79,13 @@ padding:0 0 10px 0;
 
 	p{
 		position: relative;
-		font-size: 25px;
+		font-size: 30px;
 		margin: 0; 	
 		transition: .5s;
+	}
+
+	.rotateP{
+		font-size: 20px;
 	}
 
 	.indicator{
@@ -137,8 +141,8 @@ padding:0 0 10px 0;
     animation: animName 5s linear infinite;
     position: absolute;
     width: 25px;
-    height: 25px;
-    border: 5px solid #497DDD;
+    height: 24px;
+    border: 3px solid #497DDD;
     border-right-color: transparent;
     border-radius: 50%;
     border-left-color: transparent;
