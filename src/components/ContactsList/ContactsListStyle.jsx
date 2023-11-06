@@ -29,7 +29,7 @@ export const ContactsListName = styled.div`
     font-size: 16px;
 
   }
-
+      font-size: 20px;
      display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,6 +51,7 @@ export const ContactsListName = styled.div`
     }
 
     .activeButton{
+        display: flex;
         font-size: 20px;
         margin-left: auto;
     }
@@ -58,10 +59,27 @@ export const ContactsListName = styled.div`
     .contactItem{
          display: flex;
         align-items: center;
-        flex-wrap: wrap;
+    
         width: 100%;
         border-bottom: 2px solid  ${(props) => props.theme.themes.tagLineColor};
             padding:8px 0;
+    }
+
+    .stroke{
+        display: flex;
+    align-items: center;
+    }
+
+    .strokeText{
+            display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    .number{
+        font-size: 14px;
+    margin: 0;
+    color: #676767;
     }
     
 `
@@ -104,4 +122,5 @@ export const ContactListEditInput = styled.input`
     background-color: ${(props) => props.theme.themes.tagLineColor};
     border-style: ridge;
     color: ${(props) => props.theme.themes.titleColor};
+
 `

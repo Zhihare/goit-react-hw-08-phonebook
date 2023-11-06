@@ -13,8 +13,10 @@ export const MobileUserMenu = () => {
 	return (
 		<UserMenuMobileDiv>
 			<DivIcon>
+
 				<p>{user.name.charAt(0)}</p>
 				<span>{user.name}</span>
+				<div className='rotateName'></div>
 			</DivIcon>
 			<DivIcon>
 				<ContactsListButton className='appButton' type="button" onClick={() => dispatch(logOut())}>

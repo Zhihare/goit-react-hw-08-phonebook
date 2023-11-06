@@ -79,7 +79,7 @@ padding:0 0 10px 0;
 
 	p{
 		position: relative;
-		font-size: 30px;
+		font-size: 25px;
 		margin: 0; 	
 		transition: .5s;
 	}
@@ -131,6 +131,40 @@ padding:0 0 10px 0;
 		border-radius: 50%;
 		border: 2px solid  ${(props) => props.theme.themes.action};
 		transform: translateY(-24px) scale(0);
+	}
+
+	.rotateName{
+    animation: animName 5s linear infinite;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 5px solid #497DDD;
+    border-right-color: transparent;
+    border-radius: 50%;
+    border-left-color: transparent;
+
+/* &:after {
+content: "";
+width: 40px; 
+height: 40px;
+border-radius: 50%;
+position: absolute; 
+top: calc(50% - 20px); 
+left: calc(50% - 20px);
+background: radial-gradient(#EF7D55, #F24012);
+} */
+
+}
+
+@keyframes animName {
+ 0%{
+    transform: rotate(0deg);
+   }
+100%{
+    transform: rotate(360deg);
+   }
+}
+
 	}
 
 `

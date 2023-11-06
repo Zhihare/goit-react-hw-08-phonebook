@@ -154,9 +154,9 @@ export const ContactsList = () => {
 								}}>
 									{matches => (
 										<Fragment>
-											{matches.mobile && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 10)}</p></>}
-											{matches.small && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 6)}: {truncateString(number, 12)}</p></>}
-											{matches.medium && <><span>{getRandomEmoji(name)}</span><p>{truncateString(name, 12)}: {truncateString(number, 12)}</p></>}
+											{matches.mobile && <div className='stroke'><span>{getRandomEmoji(name)}</span><div className='strokeText'><p>{truncateString(name, 10)}</p><p className='number'> {truncateString(number, 10)}</p></div></div>}
+											{matches.small && <div className='stroke'><span>{getRandomEmoji(name)}</span><div className='strokeText'><p>{truncateString(name, 14)}</p><p className='number'> {truncateString(number, 14)}</p></div></div>}
+											{matches.medium && <div className='stroke'><span>{getRandomEmoji(name)}</span><div className='strokeText'><p>{truncateString(name, 20)}</p><p className='number'> {truncateString(number, 20)}</p></div></div>}
 										</Fragment>
 									)}
 								</Media>
