@@ -91,54 +91,20 @@ padding:0 0 10px 0;
 		font-size: 20px;
 	}
 
-	.indicator{
-		position: absolute;
-	    top: -100%;
-   		 width: 55px;
-    	height: 55px;
-		background: ${(props) => props.theme.themes.mobileBar};
-		border: 6px solid transparent;
-		border-radius: 50%;
-		z-index: -2;
-	}
-
-	.indicator::before{
-		content: '';
-		position: absolute;
-		top: 45%;
-    	left: -22px;
-		width: 20px;
-		height: 20px;
-		background: transparent;
-		border-top-right-radius: 20px;
-		box-shadow: 1px -10px 0 transparent;
-	}
-
-
-		.indicator::after{
-		content: '';
-		position: absolute;
-		top: 45%;
-    	right: -22px;
-		width: 20px;
-		height: 20px;
-		background: transparent;
-		border-top-left-radius: 20px;
-		box-shadow: 1px -10px 0 transparent;
-	}
-
 	
 	.circle{
-		z-index: -5;
+		
 		position: absolute;
 		display: block;
 		width: 50px;
 		height: 50px;
 		background: ${(props) => props.theme.themes.mobileBar};
 		border-radius: 50%;
-		border: 2px solid  ${(props) => props.theme.themes.action};
+		border: 2px solid  ${(props) => props.theme.themes.active};
 		transform: translateY(-24px) scale(0);
+		z-index:-5;
 	}
+
 
 	.rotateName{
     animation: animName 5s linear infinite;
